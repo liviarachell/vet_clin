@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VetCare | Gestão Veterinária</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main id="loginView" class="login-layout">
+    <section class="login-card">
+      <div class="brand-mark">✚</div><p class="eyebrow">GESTÃO VETERINÁRIA</p>
+      <h1>VetCare</h1><p class="muted">Cuidado organizado, atendimento melhor.</p>
+      <form id="loginForm">
+        <label>E-mail<input type="email" id="email" required autocomplete="username" placeholder="admin@vetcare.com"></label>
+        <label>Senha<input type="password" id="senha" required autocomplete="current-password" placeholder="Sua senha"></label>
+        <button class="primary full" type="submit">Entrar no sistema</button>
+        <p id="loginError" class="feedback" role="alert"></p>
+      </form>
+      <p class="hint">Acesso demonstrativo: admin@vetcare.com · Admin@123</p>
+    </section>
+  </main>
+
+  <div id="appView" class="app hidden">
+    <aside class="sidebar">
+      <div class="side-brand"><span>✚</span><div><b>VetCare</b><small>CLÍNICA VETERINÁRIA</small></div></div>
+      <nav>
+        <button class="nav-item active" data-page="inicio">▦ <span>Visão geral</span></button>
+        <button class="nav-item" data-page="tutores">♙ <span>Tutores</span></button>
+        <button class="nav-item" data-page="pets">♡ <span>Pets</span></button>
+        <button class="nav-item" data-page="agendamentos">▣ <span>Agendamentos</span></button>
+      </nav>
+      <div class="side-bottom"><small>SISTEMA DE ATENDIMENTO</small><button id="logoutBtn" class="logout">↪ Sair do sistema</button></div>
+    </aside>
+    <main class="content">
+      <header class="topbar"><div><p class="eyebrow">PAINEL DE CONTROLE</p><h2 id="pageTitle">Visão geral</h2></div><div class="user-chip"><span class="avatar">VC</span><span id="userName">Usuário</span></div></header>
+      <section id="pageContent"></section>
+      <div id="toast" class="toast" role="status"></div>
+    </main>
+  </div>
+  <script src="/js/app.js"></script>
+</body></html>
